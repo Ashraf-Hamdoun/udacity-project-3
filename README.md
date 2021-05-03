@@ -17,6 +17,8 @@ The goal of this repo is be an example of a basic but functional app built on Ex
         - config our webpack development | production files
         - add some loaders ane plugins like 'sass-loader' , 'html-webpack-plugin' ...
         - Install workbox-webpack-plugin for services workers
+        - add .gitignore file to ignore some files and folders
+        - md .env file to put the api key in it and using its plugin
 
         - Config #JavaScript files :
             * have API key from meaningcloud

@@ -1,10 +1,10 @@
 const apiUrl = "https://api.meaningcloud.com/sentiment-2.1";
-const apiKey = "?key=0edf21344465a6a164864d70cd3f5213&&url=";
+// const apiKey = "?key=0edf21344465a6a164864d70cd3f5213&&url=";
 let txtLang = '&lang=en';
 
 async function handleRequest(validUrl) {
     try {
-        const res = await fetch(apiUrl + apiKey + validUrl + txtLang);
+        const res = await fetch(apiUrl + process.env.API_key + validUrl + txtLang);
         const data = await res.json();
 
         let text = data.sentence_list[0].text;
