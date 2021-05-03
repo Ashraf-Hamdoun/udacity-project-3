@@ -1,0 +1,77 @@
+// Import files
+@import "_commun";
+
+main {
+  .container {
+
+    p.title {
+      font-size: 1.2rem;
+      color: $mainClr;
+      padding: 20px 0;
+      
+      span {
+        color: $mainClr;
+        font-weight: bold;
+        font-size: 1.5rem;
+      }
+    }
+
+    section {
+      width: 100%;
+      margin-bottom: 20px;
+      background-color: $subClr;
+      padding: 10px;
+      text-align: center;
+
+      form#form {
+        padding: 5px;
+
+        * {
+          border-radius: 20px;
+        }
+
+        label {
+          font-weight: bold;
+          background-color: white;
+        }
+
+        label, input {
+          width: 80%;
+          padding: 20px;
+          font-size: 1rem;
+          border: 1px solid #000;
+        }
+
+        #btn-submit {
+          display: block;
+          margin: 15px auto 0;
+          cursor: pointer;
+          padding: 5px 15px;
+          font-size: 1rem;
+          background: $mainClr;
+          color: $subClr;
+          transition: all 0.5s;
+
+          &:hover {
+            background: $subClr;
+            color: $mainClr;
+            font-size: 1.2rem;
+          }
+        }
+      }
+
+      strong {
+        font-size: 1.2rem;
+      }
+
+      div {
+        font-weight: bold;
+        
+        span {
+          color: $mainClr;
+          font-style: oblique;
+        }
+      }
+    }
+  }
+}

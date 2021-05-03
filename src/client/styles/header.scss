@@ -1,0 +1,24 @@
+// Import files
+@import "_commun";
+
+header {
+  width: 100%;
+  background-color: $mainClr;
+  color: white;
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar {
+      font-size: 1rem;
+    }
+  }
+}
