@@ -14,7 +14,8 @@ async function handleRequest(validUrl) {
 
         Post('http://localhost:8081/addUrl', {text, agreement, confidence, scoreTag});
 
-        console.log(text, agreement, confidence, scoreTag);
+        Client.updateUi();
+
     } catch (error) {
         console.log('error', error);
     }

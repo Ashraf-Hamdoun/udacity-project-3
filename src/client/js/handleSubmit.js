@@ -12,8 +12,6 @@ function handleSubmit(event) {
         // function to handle our request to API
         Client.handleRequest(articleUrl);
 
-        Client.updateUi();
-
     } else {
         console.log('URL is not valid');
         alert('Please check your Url and renter a valid one !');
