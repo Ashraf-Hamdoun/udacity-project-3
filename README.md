@@ -16,6 +16,7 @@ The goal of this repo is be an example of a basic but functional app built on Ex
         - make file called .babelrc
         - config our webpack development | production files
         - add some loaders ane plugins like 'sass-loader' , 'html-webpack-plugin' ...
+        - Install workbox-webpack-plugin for services workers
 
         - Config #JavaScript files :
             * have API key from meaningcloud
