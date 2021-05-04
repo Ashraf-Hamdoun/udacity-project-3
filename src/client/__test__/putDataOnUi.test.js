@@ -1,4 +1,4 @@
-import updateUi from '../js/updateUi'
+import putDataOnUi from '../js/putDataOnUi'
 
 global.fetch = jest.fn(() =>
     // this's the fetch
@@ -13,7 +13,7 @@ global.fetch = jest.fn(() =>
 // try
 it("Fetch data from server and draw it", async () => {
     // here i call my function
-    const _testApi = await updateUi();
+    const _testApi = await putDataOnUi();
     // how nany times we expect fetching will happen
     expect(fetch).toHaveBeenCalledTimes(1);
     // what result of this function

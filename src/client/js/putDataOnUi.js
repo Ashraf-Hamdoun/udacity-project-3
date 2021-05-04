@@ -1,4 +1,4 @@
-async function updateUi () {
+async function putDataOnUi () {
     try {
         const request = await fetch('http://localhost:8081/get');
         const allData = await request.json();
@@ -12,6 +12,7 @@ async function updateUi () {
         const subjectivity = document.querySelector('#subjectivity');
         const irony = document.querySelector('#irony');
 
+        // put Data in elements of html UI
         textDiv.innerHTML = 'Text is : ' + '<span>' + allData.text + '</span>';
         agreementDiv.innerHTML = 'Agreement is : ' + '<span>' + allData.agreement + '</span>';
         confidenceDiv.innerHTML = 'Confidence is : ' + '<span>' + allData.confidence + '</span>';
@@ -20,8 +21,8 @@ async function updateUi () {
         irony.innerHTML = 'Irony is : ' + '<span>' + allData.irony + '</span>';
         
     } catch(error) {
-        console.log('Error :: ', error);
+        console.log('Error is :: ', error);
     }
 };
 
-export default updateUi;
+export default putDataOnUi;

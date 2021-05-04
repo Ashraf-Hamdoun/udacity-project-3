@@ -1,5 +1,5 @@
-function checkForUrl (url) {
-    console.log("::: Running checkForUrl ::: >> ", url);
+function Urlchecker (url) {
+    console.log("::: Running UrlChecker ::: >> ", url);
 
     var res = new RegExp('^(https?:\\/\\/)?' + // protocol
     '((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|'+ // domain name
@@ -11,4 +11,4 @@ function checkForUrl (url) {
     return !!res.test(url);
 }
 
-export { checkForUrl };
+export { Urlchecker };

@@ -1,6 +1,6 @@
-import { checkForUrl } from './js/UrlChecker';
-import handleRequest from './js/handleRequest';
-import updateUi from './js/updateUI';
+import { Urlchecker } from './js/UrlChecker';
+import getDataFromApi from './js/getDataFromApi';
+import putDataOnUi from './js/putDataOnUi';
 import handleSubmit from './js/handleSubmit';
 
 import './styles/header.scss';
@@ -11,11 +11,9 @@ const btnSubmit = document.querySelector('#btn-submit');
 
 btnSubmit.addEventListener('click', handleSubmit);
 
-import {Post} from './js/handleRequest'
-
 export {
-    checkForUrl,
-    handleRequest,
-    updateUi,
+    Urlchecker,
+    getDataFromApi,
+    putDataOnUi,
     handleSubmit
 };

@@ -1,4 +1,4 @@
-import handleRequest from '../js/handleRequest'
+import getDataFromApi from '../js/getDataFromApi'
 
 global.fetch = jest.fn(() =>
     // this's the fetch
@@ -13,7 +13,7 @@ global.fetch = jest.fn(() =>
 // try
 it("Fetch data from server and draw it", async () => {
     // here i call my function
-    const _testApi = await handleRequest("www.google.com");
+    const _testApi = await getDataFromApi("www.google.com");
     // how nany times we expect fetching will happen
     expect(fetch).toHaveBeenCalledTimes(1);
     // what result of this function

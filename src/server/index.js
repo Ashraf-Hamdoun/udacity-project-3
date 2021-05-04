@@ -33,7 +33,7 @@ app.listen(PORT, (error) => {
 
 // Routes & Requests
 /** POST route */
-app.post('/addUrl', addData);
+app.post('/adds', addData);
 
 function addData(req, res) {
     

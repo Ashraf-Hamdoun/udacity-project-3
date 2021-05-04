@@ -4,17 +4,18 @@ function handleSubmit(event) {
     const articleUrl = document.querySelector('#article-url').value;
     
     // check what text was put into the form field
-    if (Client.checkForUrl(articleUrl)) {
-        console.log('URL is valid');
+    if (Client.Urlchecker(articleUrl)) {
+        console.log('the URL is valid');
 
         // function to handle our request to API
-        Client.handleRequest(articleUrl);
+        Client.getDataFromApi(articleUrl);
 
     } else {
-        console.log('URL is not valid');
+        // if the url isn't correct do this
+        console.log('the URL is not valid');
         alert('Please check your Url and renter a valid one !');
     }
-
+    // do this to show if button listen to the event
     console.log("::: Form Submitted :::");
     
 }
