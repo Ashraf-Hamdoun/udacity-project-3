@@ -1,5 +1,4 @@
 const apiUrl = "https://api.meaningcloud.com/sentiment-2.1";
-// const apiKey = "?key=0edf21344465a6a164864d70cd3f5213&&url=";
 let txtLang = '&lang=en';
 
 async function handleRequest(validUrl) {
@@ -7,12 +6,16 @@ async function handleRequest(validUrl) {
         const res = await fetch(apiUrl + process.env.API_key + validUrl + txtLang);
         const data = await res.json();
 
+        console.log(data);
+        
         let text = data.sentence_list[0].text;
-        let agreement = data.sentence_list[0].agreement;
-        let confidence = data.sentence_list[0].confidence;
-        let scoreTag = data.sentence_list[0].score_tag;
+        let agreement = data.agreement;
+        let confidence = data.confidence;
+        let scoreTag = data.score_tag;
+        let irony = data.irony;
+        let subjectivity = data.subjectivity;
 
-        Post('http://localhost:8081/addUrl', {text, agreement, confidence, scoreTag});
+        Post('http://localhost:8081/addUrl', {text, agreement, confidence, scoreTag, irony, subjectivity});
 
         Client.updateUi();
 
@@ -40,3 +43,7 @@ async function Post (url = '', data = {}) {
 };
 
 export default handleRequest;
+
+export {
+    Post
+}

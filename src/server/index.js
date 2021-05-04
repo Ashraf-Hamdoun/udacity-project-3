@@ -40,6 +40,8 @@ function addData(req, res) {
     mockAPIResponse.agreement = req.body.agreement;
     mockAPIResponse.confidence = req.body.confidence;
     mockAPIResponse.scoreTag = req.body.scoreTag;
+    mockAPIResponse.irony = req.body.irony;
+    mockAPIResponse.subjectivity = req.body.subjectivity;
 
     // See it in the terminal
     console.log(mockAPIResponse);

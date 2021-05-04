@@ -3,8 +3,6 @@ function handleSubmit(event) {
     
     const articleUrl = document.querySelector('#article-url').value;
     
-    console.log('this is the url ' + articleUrl);
-
     // check what text was put into the form field
     if (Client.checkForUrl(articleUrl)) {
         console.log('URL is valid');

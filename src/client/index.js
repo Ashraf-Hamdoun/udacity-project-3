@@ -9,10 +9,9 @@ import './styles/footer.scss';
 
 const btnSubmit = document.querySelector('#btn-submit');
 
-// const urlEx = 'https://jamesclear.com/five-step-creative-process';
-
 btnSubmit.addEventListener('click', handleSubmit);
 
+import {Post} from './js/handleRequest'
 
 export {
     checkForUrl,

@@ -2,7 +2,9 @@ let json = {
     text: 'Ashraf',
     agreement: '',
     confidence: '',
-    scoreTag: ''
+    scoreTag: '',
+    irony: '',
+    subjectivity: ''
 }
 
 module.exports = json
