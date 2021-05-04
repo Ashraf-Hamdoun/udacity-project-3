@@ -22,6 +22,7 @@ app.get('/', function (req, res) {
     res.sendFile('dist/index.html');
 })
 
+
 // designates what port the app will listen to for incoming requests
 app.listen(PORT, (error) => {
     if (error) throw new Error(error)
@@ -42,7 +43,7 @@ function addData(req, res) {
     mockAPIResponse.scoreTag = req.body.scoreTag;
     mockAPIResponse.irony = req.body.irony;
     mockAPIResponse.subjectivity = req.body.subjectivity;
-
+    
     // See it in the terminal
     console.log(mockAPIResponse);
 }
@@ -55,3 +56,5 @@ app.get('/get', sendData);
 function sendData(req, res) {
     res.send(mockAPIResponse);
 }
+
+module.exports = { app } ;

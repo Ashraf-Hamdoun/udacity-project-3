@@ -1,6 +1,6 @@
 async function updateUi () {
-    const request = await fetch('http://localhost:8081/get');
     try {
+        const request = await fetch('http://localhost:8081/get');
         const allData = await request.json();
         console.log(allData);
         
