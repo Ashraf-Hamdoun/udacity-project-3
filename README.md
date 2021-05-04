@@ -2,6 +2,12 @@
 
 The goal of this repo is be an example of a basic but functional app built on Express and Webpack.
 
+    #How to start :
+        - after clone it
+        - cd udacity-project-3
+        - npm i
+        - npm run build-prod to build /dist folder
+        - npm run start to run the server
 
     #How to build :
         - install Webpack and CLI

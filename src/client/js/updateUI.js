@@ -3,15 +3,21 @@ async function updateUi () {
     try {
         const allData = await request.json();
         console.log(allData);
+        
+        // Elements
+        const textDiv = document.querySelector('#text');
+        const agreementDiv = document.querySelector('#agreement');
+        const confidenceDiv = document.querySelector('#confidence');
+        const score_tag = document.querySelector('#score_tag');
+        const subjectivity = document.querySelector('#subjectivity');
+        const irony = document.querySelector('#irony');
 
-        document.querySelector('#text').innerHTML = 'Text is : ' + '<span>' + allData.text + '</span>';
-        document.querySelector('#agreement').innerHTML = 'Agreement is : ' + '<span>' + allData.agreement + '</span>';
-        document.querySelector('#confidence').innerHTML = 'Confidence is : ' + '<span>' + allData.confidence + '</span>';
-        document.querySeclector('#score_tag').innerHTML = 'Score tag is : ' + '<span>' + allData.scoreTag + '</span>';
-        document.querySeclector('#irony').innerHTML = 'Irony tag is : ' + '<span>' + allData.irony + '</span>';
-        document.querySeclector('#subjectivity').innerHTML = 'Subjectivity tag is : ' + '<span>' + allData.subjectivity + '</span>';
-
-        console.log(document.querySeclector('#subjectivity'));
+        textDiv.innerHTML = 'Text is : ' + '<span>' + allData.text + '</span>';
+        agreementDiv.innerHTML = 'Agreement is : ' + '<span>' + allData.agreement + '</span>';
+        confidenceDiv.innerHTML = 'Confidence is : ' + '<span>' + allData.confidence + '</span>';
+        score_tag.innerHTML = 'Score tag is : ' + '<span>' + allData.scoreTag + '</span>';
+        subjectivity.innerHTML = 'Subjectivity is : ' + '<span>' + allData.subjectivity + '</span>';
+        irony.innerHTML = 'Irony is : ' + '<span>' + allData.irony + '</span>';
         
     } catch(error) {
         console.log('Error :: ', error);
